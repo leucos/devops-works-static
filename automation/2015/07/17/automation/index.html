@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Automated software deploys</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Web stacks architecture, deployement, management & supervision">
+    <link rel="canonical" href="https://devops.works/automation/2015/07/17/automation/">
+
+
+    <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+
+
+    <body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--<a class="navbar-brand page-scroll" href="#page-top">devops.works</a>-->
+                <a class="navbar-brand page-scroll" href="#page-top"><span class="navbar-nocolor-brand">dev</span>Ops<span class="navbar-nocolor-brand">.works</span></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#team">Team</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#clients">Customers</a>
+                    </li>                    
+                    <li>
+                        <a class="page-scroll" href="https://blog.devops.works">Blog</a>
+                    </li>                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in">architecture - development - operations</div>
+                <div class="intro-heading">devops.works</div>
+                <a href="#services" class="page-scroll btn btn-xl">More</a>
+            </div>
+        </div>
+    </header>
+<!--
+        
+          <a class="page-link" href="/about/">About</a>
+        
+          
+        
+          
+        
+          
+        
+ -->
+
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Services</h2>
+                    <h3 class="section-subheading text-muted">With 20 years in the opensource field, we accumulated a large experience in systems architecture design.<br />We work under the devops mantra: <strong>C</strong>ulture, <strong>A</strong>utomation, <strong>M</strong>easurement, <strong>S</strong>haring.</h3>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-3">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Architecture & design</h4>
+                    <p class="text-muted">Web stack architecture, capacity planning, scale-out. Infrastructure provisionning, whether on-premises or {I,S,P}aaS/cloud.</p>
+                </div>
+                <div class="col-md-3">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-rocket fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Deploys & operations</h4>
+                    <p class="text-muted">Internet stack deployment. Operation and supervision 24/7/365 with post-mortems analysis and monthly  operations reports. You have access to dashboards and everything is transparent. Hot-potatoes, skeletons in the closet and <em>NotMyProblem</em><sup><i class="fa fa-trademark"></i></sup> attitude is not in our culture.</p>
+                </div>   
+                <div class="col-md-3">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-dashboard fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Performance optimisation & high-availability</h4>
+                    <p class="text-muted">Performance optimisation, leveraging caches, clusters and configuration "tuning", fed back by measurements. Improving uptime through highly-available setups.</p>
+                </div>
+                <div class="col-md-3">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-cogs fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Automation & measurement</h4>
+                    <p class="text-muted">Infrastucture automation (bootstrapping/deploy/management). CI/CD/CD pipelines setup. Infrastructure supervision, metrology, logging and APM (application performance maangement).</p>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-6">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-paw fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Tools we love</h4>
+                    <p class="text-muted">We work mostly with Ansible, Chef, Docker, the TICK stack (Telegraf, InfluxDB, Chronograf, Kapacitor), ELK (Elasticsearch, Logstach, Kibana), HAProxy, Varnish, Nginx, various MySQL versions (Percona Server/XtraDB, MySQL, MariaDB & galera). We're fond of Redis & Cyrus IMAP. We love SaaS too, and use Git{hub,lab}, DataDog, PagerDuty, AWS, DigitalOcean, Uptimerobot, and WiseCash <i class="fa fa-smile-o"></i></p>
+                </div>
+                <div class="col-md-6">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-remove fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">What we don't do</h4>
+                    <p class="text-muted">We do not work on non-OSS stuff, although we can help you transitionning from proprietary software to open source. We do not work in "hey put this in production, thanks" mode. We work with upstream teams to create the best workflow, so we can ship qualitiy code fast. We don't build "web sites" (we did this one, you get the idea...) although we have friend companies we can recommend that excel in this area.</p>
+                </div>                
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Portfolio</h2>
+                </div>
+            </div>
+            <div class="row">
+            
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal8" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/elasticsearch-thumbnail.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Elasticsearch capacity planning</h4>
+                        <p class="text-muted">Capacity planning for large indexes</p>
+                    </div>
+                </div>
+            
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/tower-thumbnail.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Automated software deploys</h4>
+                        <p class="text-muted">Infrastrucure & application automation</p>
+                    </div>
+                </div>
+            
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal7" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/esante-thumbnail.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>High traffic web site operations</h4>
+                        <p class="text-muted">Deployment, management & operations</p>
+                    </div>
+                </div>
+            
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/letters-thumbnail.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Large scale email infrastructure</h4>
+                        <p class="text-muted">SMTP/IMAP stack large mailstore</p>
+                    </div>
+                </div>
+            
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/dash-thumbnail.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Dashboarding</h4>
+                        <p class="text-muted">Specific Dashboard Develoment</p>
+                    </div>
+                </div>
+            
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/laclasse-thumbnail.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>laclasse.com</h4>
+                        <p class="text-muted">Architecture, deployment & operations</p>
+                    </div>
+                </div>
+            
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/nww-thumbnail.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>A.R.I.</h4>
+                        <p class="text-muted">Large Network Design and Deployment</p>
+                    </div>
+                </div>
+            
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/cluster-thumbnail.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Project CHARM</h4>
+                        <p class="text-muted">Proxy Cluster Deployment</p>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Team</h2>
+                </div>
+            </div>
+            <div class="row">
+                
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="img/team/1.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Michel Blanc</h4>
+                        <p class="text-muted">All things Ansible, networking, webstacks. Linux addict since the SLS days, never looked back. Frequently found in his sleeping bag in he wild.
+</p>
+                        <ul class="list-inline social-buttons">
+                            
+                            <li><a href="https://twitter.com/b9m"><i class="fa fa-twitter"></i></a>
+                            
+                            <li><a href="https://careers.stackoverflow.com/leucos"><i class="fa fa-stack-overflow"></i></a>
+                            
+                            <li><a href="fr.linkedin.com/in/michelblanc"><i class="fa fa-linkedin"></i></a>
+                            
+                            <li><a href="michel@devops.works"><i class="fa fa-envelope"></i></a>
+                            
+
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="img/team/2.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Virginie Blanc</h4>
+                        <p class="text-muted">The Boss. Handles financial, accounting, contracts and everything that geeks are allergic to. As a PagerDuty backup, she pokes us with a very pointy stick if her phone rings.
+</p>
+                        <ul class="list-inline social-buttons">
+                            
+                            <li><a href="virginie@devops.works"><i class="fa fa-envelope"></i></a>
+                            
+
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="img/team/3.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Erwan Arzur</h4>
+                        <p class="text-muted">Chef master & failover firefighter. Starting with Netscape, Erwan exercised his skills in SF, HK, China, ... you name it. If he's not cooking with Chef, he's probably sailing off brittany coasts.
+</p>
+                        <ul class="list-inline social-buttons">
+                            
+                            <li><a href="https://twitter.com/zuzur"><i class="fa fa-twitter"></i></a>
+                            
+                            <li><a href="https://www.linkedin.com/profile/view?id=AAkAAAAHWq4BvVlhcMHcKnvJecrZWyCnEcq19jc"><i class="fa fa-linkedin"></i></a>
+                            
+
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Aside -->
+    <section id="clients" class="bg-light-gray">
+    <aside class="clients">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">We worked with
+                </div>
+            </div>        
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <a href="http://www.connex-it.fr" target="_blank">
+                        <img src="img/logos/connexit.png" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="http://www.e-sante.fr" target="_blank">
+                        <img src="img/logos/esante.png" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="http://www.erasme.org" target="_blank">
+                        <img src="img/logos/erasme.png" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="http://www.reducbox.com" target="_blank">
+                        <img src="img/logos/reducbox.png" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <a href="http://www.fiducial.fr" target="_blank">
+                        <img src="img/logos/fiducial.png" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="http://www.fdj.fr" target="_blank">
+                        <img src="img/logos/fdj.png" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="http://www.antesis.fr" target="_blank">
+                        <img src="img/logos/antesis.png" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="http://www.bee4.fr" target="_blank">
+                        <img src="img/logos/bee4.png" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+            </div>            
+        </div>
+    </aside>
+    </section>
+      <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; devops.works 2016</span><br />
+                    We are a proud <a href="https://aful.org/" target="_blank">AFUL</a> member.
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        
+                        <li><a href="http://twitter.com/b9m"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        
+                        <li><a href="http://github.com/leucos"><i class="fa fa-github"></i></a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <span class="nocolor-brand">dev</span><span class="color-brand">Ops</span><span class="nocolor-brand">.works</span><br />
+                    
+                    <span class="address">Parc d'activités innovantes</span><br />
+                    
+                    <span class="address">69930 Saint Clément les Places</span><br />
+                    
+                    <span class="address">FRANCE</span><br />
+                    
+
+                </div>
+            </div>
+        </div>
+    </footer>
+     <!-- Portfolio Modals -->
+ 
+    <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Elasticsearch capacity planning</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/elasticsearch.png" class="img-responsive img-centered" alt="image-alt">
+                            <p>Capacity planning for billion-document scale log analysis and web indexing.</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><span class="text-primary">Bee4</span>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><span class="text-primary">January 2016</span>
+                                    </strong>
+                                </li>
+                                <li>Type:
+                                    <strong><a href="http://startbootstrap.com">Capacity Planning</a>
+                                    </strong>
+                                </li>
+                                <li>Technologies:
+                                
+                                    <strong><a href="https://www.elastic.co/products/elasticsearch">ElasticSearch</a>
+                                    </strong>
+                                    
+                                
+                                </li>                                
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Automated software deploys</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/tower.png" class="img-responsive img-centered" alt="image-alt">
+                            <p>Automated application deployements on bare metal and virtual machines, spannning dozens of servers. Streamlined development operations from developper laptops to on-prem infrastructure via automated CI/CD pipelines.</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><span class="text-primary">Fiducial, E-Santé, Reducbox</span>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><span class="text-primary">2012-2015</span>
+                                    </strong>
+                                </li>
+                                <li>Type:
+                                    <strong><a href="http://startbootstrap.com">Automation</a>
+                                    </strong>
+                                </li>
+                                <li>Technologies:
+                                
+                                    <strong><a href="http://www.ansible.com">Ansible</a>
+                                    </strong>
+                                     | 
+                                
+                                    <strong><a href="http://libvirt.org/">libVirt</a>
+                                    </strong>
+                                     | 
+                                
+                                    <strong><a href="https://jenkins-ci.org">Jenkins</a>
+                                    </strong>
+                                    
+                                
+                                </li>                                
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>High traffic web site operations</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/esante.png" class="img-responsive img-centered" alt="image-alt">
+                            <p>Optimization, monitoring, metrology & operations for e-sante.fr.</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><span class="text-primary">Many</span>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><span class="text-primary">Q4 2015</span>
+                                    </strong>
+                                </li>
+                                <li>Type:
+                                    <strong><a href="http://startbootstrap.com">Operations & optimization</a>
+                                    </strong>
+                                </li>
+                                <li>Technologies:
+                                
+                                    <strong><a href="https://www.datadoghq.com">DataDog</a>
+                                    </strong>
+                                     | 
+                                
+                                    <strong><a href="http://memcached.org/">Memcached</a>
+                                    </strong>
+                                     | 
+                                
+                                    <strong><a href="https://www.percona.com/software/mysql-database/percona-server">MySQL Percona Server</a>
+                                    </strong>
+                                     | 
+                                
+                                    <strong><a href="https://docker.io">Docker</a>
+                                    </strong>
+                                     | 
+                                
+                                    <strong><a href="http://www.haproxy.org">HAProxy</a>
+                                    </strong>
+                                    
+                                
+                                </li>                                
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Large scale email infrastructure</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/letters.png" class="img-responsive img-centered" alt="image-alt">
+                            <p>High trafic, high volume mail architecture for 150k+ users and 4M messages per week. Based on Postfix instances, delivering to POP/IMAP Cyrus backends.</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><span class="text-primary">ERASME</span>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><span class="text-primary">2001-Présent</span>
+                                    </strong>
+                                </li>
+                                <li>Type:
+                                    <strong><a href="http://startbootstrap.com">Mail hosting</a>
+                                    </strong>
+                                </li>
+                                <li>Technologies:
+                                
+                                    <strong><a href="http://www.cyrusimap.org/">Cyrus</a>
+                                    </strong>
+                                     | 
+                                
+                                    <strong><a href="http://www.postfix.org/">Postfix</a>
+                                    </strong>
+                                    
+                                
+                                </li>                                
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Dashboarding</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/dash.png" class="img-responsive img-centered" alt="image-alt">
+                            <p>Dashboard development and deployment for infrastructure and application monitoring.</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><span class="text-primary">NDA</span>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><span class="text-primary">April 2014</span>
+                                    </strong>
+                                </li>
+                                <li>Type:
+                                    <strong><a href="http://startbootstrap.com">Web Development</a>
+                                    </strong>
+                                </li>
+                                <li>Technologies:
+                                
+                                    <strong><a href="https://www.datadoghq.com">DataDog</a>
+                                    </strong>
+                                     | 
+                                
+                                    <strong><a href="https://influxdata.com/time-series-platform/">TICK stack</a>
+                                    </strong>
+                                    
+                                
+                                </li>                                
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>laclasse.com</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/laclasse.png" class="img-responsive img-centered" alt="image-alt">
+                            <p>Planned infrastructure for all versions, teaming with developpers. The application, deployed with Ansible, served billions of pages to thousands of users in high-schools.</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><span class="text-primary">Laclasse.com</span>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><span class="text-primary">April 2014</span>
+                                    </strong>
+                                </li>
+                                <li>Type:
+                                    <strong><a href="http://startbootstrap.com">High availability</a>
+                                    </strong>
+                                </li>
+                                <li>Technologies:
+                                
+                                    <strong><a href="http://www.haproxy.org">HAProxy</a>
+                                    </strong>
+                                     | 
+                                
+                                    <strong><a href="http://nginx.org">Nginx</a>
+                                    </strong>
+                                     | 
+                                
+                                    <strong><a href="http://www.mysql.com">MySQL</a>
+                                    </strong>
+                                     | 
+                                
+                                    <strong><a href="https://www.ruby-toolbox.com/categories/web_app_frameworks">Ruby Frameworks</a>
+                                    </strong>
+                                     | 
+                                
+                                    <strong><a href="http://www.ansible.com/">Ansible</a>
+                                    </strong>
+                                    
+                                
+                                </li>                                
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>A.R.I.</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/nww.png" class="img-responsive img-centered" alt="image-alt">
+                            <p>Network design and IP planning for Autoroutes Rhodaniennes de l'Information, a network spanning 1700 sites, with dynamic routing, IPsec or DMVPN site groups over an operator network.</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><span class="text-primary">EPARI</span>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><span class="text-primary">2001-2003</span>
+                                    </strong>
+                                </li>
+                                <li>Type:
+                                    <strong><a href="http://startbootstrap.com">Networking</a>
+                                    </strong>
+                                </li>
+                                <li>Technologies:
+                                
+                                    <strong><a href="http://www.cisco.com/">Cisco IOS</a>
+                                    </strong>
+                                     | 
+                                
+                                    <strong><a href="http://www.ipsec.org/">IPsec</a>
+                                    </strong>
+                                     | 
+                                
+                                    <strong><a href="http://en.wikipedia.org/wiki/Border_Gateway_Protocol">BGP</a>
+                                    </strong>
+                                     | 
+                                
+                                    <strong><a href="http://en.wikipedia.org/wiki/Dynamic_Multipoint_Virtual_Private_Network">DMVPN</a>
+                                    </strong>
+                                    
+                                
+                                </li>                                
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Project CHARM</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/cluster.png" class="img-responsive img-centered" alt="image-alt">
+                            <p>Cache Haut-Débit pour les Autoroutes Multimédias. Funded by the ministry of industry, this project aimed at testing various proxy cache cluster architectures. These experiments established a baseline for a production cluster that handled 8M requests per-day in the early 2000's (image courtesy Bruno Cordioli).</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><span class="text-primary">Ministry of Industry / Département du Rhône</span>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><span class="text-primary">1997-2004</span>
+                                    </strong>
+                                </li>
+                                <li>Type:
+                                    <strong><a href="http://startbootstrap.com">Clustering</a>
+                                    </strong>
+                                </li>
+                                <li>Technologies:
+                                
+                                    <strong><a href="http://www.linuxvirtualserver.org/">LVS</a>
+                                    </strong>
+                                     | 
+                                
+                                    <strong><a href="http://en.wikipedia.org/wiki/Web_Cache_Communication_Protocol">WCCP</a>
+                                    </strong>
+                                     | 
+                                
+                                    <strong><a href="http://www.cisco.com">Cisco IOS</a>
+                                    </strong>
+                                    
+                                
+                                </li>                                
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+     <!-- jQuery Version 1.11.0 -->
+    <script src="/js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="/js/jquery.easing.min.js"></script>
+    <script src="/js/classie.js"></script>
+    <script src="/js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="/js/jqBootstrapValidation.js"></script>
+    <script src="/js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/js/agency.js"></script>
+
+
+    </body>
+</html>
